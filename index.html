@@ -563,7 +563,7 @@ function shuffle(a){
 function buildQs(fromWrong=false){
   if(fromWrong)return wrongQs.map(q=>({...q}));
   const qs=[];
-  selS.forEach(n=>{for(let m=1;m<=10;m++)qs.push({type:'s',a:n,b:m,ans:n*m});});
+  selS.forEach(n=>{for(let m=1;m<=10;m++)qs.push({type:'s',a:m,b:n,ans:m*n});});
   selB.forEach(n=>{for(let m=1;m<=10;m++)qs.push({type:'b',a:n*m,b:n,ans:m});});
   return shuffle(qs);
 }
